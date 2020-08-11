@@ -1,0 +1,58 @@
+.home-wrapper {
+  display: grid;
+  grid-template-rows: 35px [top-s] 350px [top-e middle-s] 250px [middle-e bottom-s] 250px [bottom-e] 15px;
+  grid-gap: 45px;
+}
+
+.top,
+.middle,
+.bottom {
+  display: grid;
+  grid-gap: 45px;
+  text-align: center;
+  color: white;
+  font-size: 65px;
+}
+
+.top {
+  grid-row: top-s/top-e;
+  grid-template-columns: 45px[top-left-s] 1fr [top-left-e top-right-s] 1fr [top-right-e] 45px;
+  line-height: 350px;
+  .top-left {
+    grid-column: top-left-s/top-left-e;
+  }
+  .top-right {
+    grid-column: top-right-s/top-right-e;
+    background-position: center;
+  }
+}
+
+.middle {
+  grid-row: middle-s/middle-e;
+  grid-template-columns: 45px [middle-left-s] 3fr [middle-left-e middle-right-s] 1fr [middle-right-e] 45px;
+  line-height: 250px;
+  .middle-left {
+    grid-column: middle-left-s/middle-left-e;
+  }
+  .middle-right {
+    grid-column: middle-right-s/middle-right-e;
+    color: black;
+  }
+}
+
+.top-left,
+.top-right,
+.middle-left,
+.middle-right,
+.bottom {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bottom {
+  grid-row: bottom-s/bottom-e;
+  background-size: cover;
+  background-position: center;
+  line-height: 250px;
+  margin: 0px 90px;
+}

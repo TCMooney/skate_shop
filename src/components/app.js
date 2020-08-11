@@ -12,6 +12,7 @@ import About from './pages/about';
 import Contact from './pages/contact';
 import Shop from './pages/shop';
 import Cart from './pages/cart';
+import Footer from './footer/footer';
 
 
 export default class App extends Component {
@@ -27,6 +28,7 @@ export default class App extends Component {
             <Route path='/shop' component={Shop} />
             <Route path='/cart' component={Cart} />
           </Switch>
+          <Footer />
         </div>
       </Router>
     );
