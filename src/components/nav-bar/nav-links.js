@@ -8,16 +8,21 @@ export default function () {
         <Link className='nav-link' to='/'>Home</Link>
       </div>
       <div className='about-link'>
-        <Link className='nav-link' to='/about'>About</Link>
+        <Link className='nav-link' to='/new-arrivals'>New Arrivals</Link>
       </div>
       <div className='shop-link'>
-        <Link className='nav-link' to='/shop'>Shop</Link>
+        <Link className='nav-link' to='/gear'>Gear</Link>
       </div>
       <div className='contact-link'>
-        <Link className='nav-link' to='/contact'>Contact</Link>
+        <Link className='nav-link' to='/decks'>Decks</Link>
       </div>
-      <div className='cart-link'>
-        <Link className='nav-link' to='/cart'>Cart</Link>
+      <div className='shoes-link'>
+        <Link className='nav-link' to='/shoes'>Shoes</Link>
+      </div>
+      <div className='clearance-link'>
+        <Link className='nav-link' to='/clearance'>
+          Clearance
+        </Link>
       </div>
     </div>
   )

@@ -1,0 +1,32 @@
+.auth-wrapper {
+  display: grid;
+  grid-template-columns: 1fr [sign-in-start] 1fr [sign-in-end] 1fr [sign-up-start] 1fr [sign-up-end] 1fr;
+  justify-content: center;
+  
+  .sign-in-wrapper {
+    grid-column: sign-in-start/sign-in-end;
+  }
+  .sign-up-wrapper {
+    grid-column: sign-up-start/sign-up-end;
+  }
+
+  .sign-in-form,
+  .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 2px solid black;
+  }
+
+  .auth-input {
+    border: none;
+    border-bottom: 2px solid black;
+    margin-bottom: 15px;
+    padding: 7px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
