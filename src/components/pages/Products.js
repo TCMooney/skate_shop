@@ -14,7 +14,7 @@ export default function Products() {
   return (
     <div>
       {products.map(product => {
-        return <ProductItem key={product.id} {...product} />
+        return <ProductItem key={product._id} {...product} />
       })}
     </div>
   )

@@ -17,6 +17,7 @@ import Cart from './pages/cart';
 import Footer from './footer/footer';
 import Auth from './pages/Auth';
 import Products from './pages/Products';
+import AddNewProduct from './pages/AddNewProduct';
 
 
 export default class App extends Component {
@@ -34,6 +35,7 @@ export default class App extends Component {
               <Route path='/cart' component={Cart} />
               <Route path='/auth' component={Auth} />
               <Route path='/products' component={Products} />
+              <Route path='/add-product' component={AddNewProduct} />
             </Switch>
             <Footer />
           </div>
