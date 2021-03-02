@@ -1,17 +1,32 @@
 .navbar-wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  background-color: black;
 }
 
 .logo-wrapper {
   display: flex;
+  color:white;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-family: "Monoton";
+  margin-left: 15px;
+  margin-bottom: 15px;
+  &:hover {
+    text-decoration: none;
+    color: cornflowerblue;
+  }
   .logo-top {
     font-family: "Monoton";
     font-size: 75px;
     height: 90px;
+    text-align: center;
   }
 }
+
+.right-side {
+
+}
+

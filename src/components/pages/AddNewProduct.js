@@ -10,6 +10,7 @@ export default function AddNewProduct(props) {
   const [brand, setBrand] = useState('');
   const [category, setCategory] = useState('deck');
   const [price, setPrice] = useState('');
+  const [size, setSize] = useState('');
   const [imageSource, setImageSource] = useState('');
   const [fileInputState, setFileInputState] = useState('');
 
@@ -44,6 +45,7 @@ export default function AddNewProduct(props) {
       brand,
       category,
       price,
+      size,
       imageData: base64EncodedImage
     }
     console.log(newProduct)
@@ -86,6 +88,11 @@ export default function AddNewProduct(props) {
         <div className='new-product-input'>
           <FormLabel labelName='Price' />
           <input type='text' name='price' onChange={event => setPrice(event.target.value)} placeholder='Price' value={price} />
+        </div>
+
+        <div className='new-product-input'>
+          <FormLabel labelName='Size' />
+          <input type='text' name='size' onChange={event => setSize(event.target.value)} placeholder='Size' value={size} />
         </div>
 
         <div className='new-product-input'>

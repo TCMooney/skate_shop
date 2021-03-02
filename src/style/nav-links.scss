@@ -1,17 +1,15 @@
 .nav-links-wrapper {
   display: flex;
-  justify-content: space-between;
-  width: 60%;
-  border: 2px solid black;
+  justify-content: space-evenly;
+  margin-right: 30px;
 }
 
 .nav-link {
-  color: black;
-
-  transition: 0.5s all ease-in-out;
+  color: white;
   padding: 0;
-  margin: 5px 15px;
+  width: 4.5rem;
+  text-align: center;
   &:hover {
-    color: gray;
+    color: cornflowerblue;
   }
 }
