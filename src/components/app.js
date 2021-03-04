@@ -18,7 +18,7 @@ import Footer from './footer/footer';
 import Auth from './pages/Auth';
 import Products from './pages/Products';
 import AddNewProduct from './pages/AddNewProduct';
-
+import ProductManager from './pages/auth-pages/ProductManager';
 
 export default class App extends Component {
   render() {
@@ -36,6 +36,7 @@ export default class App extends Component {
               <Route path='/auth' component={Auth} />
               <Route path='/products' component={Products} />
               <Route path='/add-product' component={AddNewProduct} />
+              <Route path='/product-manager' component={ProductManager} />
             </Switch>
             <Footer />
           </div>
