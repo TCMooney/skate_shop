@@ -1,0 +1,11 @@
+.product-manager-item-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  .product-manager-item-image {
+    img {
+      height: 100px;
+    }
+  }
+}
