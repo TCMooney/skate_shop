@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 import axios from 'axios';
 
-import AuthReducer from '../reducers';
+import AuthReducer from '../reducers/AuthReducer';
 
 const initialState = {
   user: '',
@@ -13,16 +13,15 @@ export const AuthContext = createContext(initialState);
 export const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AuthReducer, initialState);
 
-  async function loadUser(success) {
+  async function loadUser() {
     try {
-      const res = await axios.get('http:localhost:4000/auth/loadUser', { withCredentials: true })
+      const res = await axios.get('http://localhost:4000/auth/loadUser', { withCredentials: true })
 
       dispatch({
         type: 'AUTHENTICATE_USER',
         payload: res.data
       })
 
-      success()
     } catch (error) {
       dispatch({
         type: 'AUTH_ERROR',

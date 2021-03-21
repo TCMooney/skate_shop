@@ -7,12 +7,12 @@ export default function ProductItem(props) {
 
   return (
     <div className='product-item-wrapper'>
-      <Link to={`/${category}/${_id}`}>
-        <div className='product-item-name'>
-          {name}
-        </div>
+      <Link className='product-item-link' to={`/productDetail/${_id}`}>
         <div className='product-item-image'>
           <img src={imageUrl} />
+        </div>
+        <div className='product-item-name'>
+          {name}
         </div>
         <div className='product-item-description'>
           {description}

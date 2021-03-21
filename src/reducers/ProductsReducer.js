@@ -6,6 +6,11 @@ export default (state, action) => {
         products: action.payload,
         isLoading: true
       }
+    case 'GET_PRODUCT_DETAIL':
+      return {
+        ...state,
+        productDetail: action.payload
+      }
     case 'ADD_NEW_PRODUCT':
       return {
         ...state,

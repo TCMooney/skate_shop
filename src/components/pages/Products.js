@@ -10,9 +10,8 @@ export default function Products() {
     getProducts();
   }, []);
 
-  console.log(products)
   return (
-    <div>
+    <div className='products-wrapper'>
       {products.map(product => {
         return <ProductItem key={product._id} {...product} />
       })}

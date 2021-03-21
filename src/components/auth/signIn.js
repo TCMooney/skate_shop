@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react';
 
-export default function SignIn() {
+import { AuthContext } from '../../contexts/AuthState';
+
+export default function SignIn(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  //TODO Import signIn function from context
+  const { signIn } = useContext(AuthContext);
 
   const onSubmit = event => {
     event.preventDefault();
@@ -14,7 +16,8 @@ export default function SignIn() {
       password
     }
 
-    //TODO Include signIn function here
+    signIn(credentials, props.success);
+
   }
   return (
     <div className='sign-in-wrapper'>

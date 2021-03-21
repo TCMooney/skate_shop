@@ -48,6 +48,20 @@ export const ProductsProvider = ({ children }) => {
     }
   }
 
+  async function getProductDetail(id) {
+    try {
+      const res = await axios.get(`http://localhost:4000/products/productDetail/${id}`)
+
+      dispatch({
+        type: 'GET_PRODUCT_DETAIL',
+        payload: res.data
+      })
+      console.log(res.data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   async function descriptionDisplay() {
     try {
       dispatch({
@@ -64,12 +78,13 @@ export const ProductsProvider = ({ children }) => {
   return (
     <ProductsContext.Provider value={{
       products: state.products,
-      productsDetail: state.productDetail,
+      productDetail: state.productDetail,
       error: state.error,
       isLoading: state.isLoading,
       getProducts,
       addProduct,
-      descriptionDisplay
+      descriptionDisplay,
+      getProductDetail
     }}>
       {children}
     </ProductsContext.Provider>
